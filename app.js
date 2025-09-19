@@ -57,7 +57,7 @@ app.delete('/customers/:id', (req, res) => {
     const customerIndex = customers.findIndex(c => c.id === customerId);
     if (customerIndex !== -1) {
         customers.splice(customerIndex, 1);
-        res.status(204).end();
+        res.status(204);
     } else {
         res.status(404).json({ message: 'Customer not found' });
     }
