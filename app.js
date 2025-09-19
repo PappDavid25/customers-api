@@ -2,6 +2,9 @@ import express from 'express';
 const app = express();
 const PORT = 3000;
 
+app.use(express.json());
+
+
 const customers = [
     { id: 1, name: 'Gusztáv', email: 'valami1@gmail.com' },
     { id: 2, name: 'Dzsézönsztethem' , mail: 'valami2@gmail.com'},
